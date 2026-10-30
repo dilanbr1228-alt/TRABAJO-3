@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Café del Cauca</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <header class="encabezado">
+        <div class="contenedor encabezado__contenido">
+            <h1 class="logo">Café del Cauca</h1>
+            <nav class="navegacion">
+                <ul class="menu">
+                    <li class="menu__item"><a href="index.html" class="menu__enlace">Inicio</a></li>
+                    <li class="menu__item"><a href="nosotros.html" class="menu__enlace">Nosotros</a></li>
+                    <li class="menu__item"><a href="contacto.html" class="menu__enlace">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="principal contenedor">
+        <!-- Sección 1: Bienvenida -->
+        <section class="seccion seccion--portada">
+            <h2>Bienvenidos</h2>
+            <p>Esta es una sección dentro del componente Main. Cada parte de la página es un componente independiente.</p>
+        </section>
+
+        <!-- Contenedor para la sección del producto y el aside lateral -->
+        <div class="contenido-grid">
+            <!-- Sección 2: Producto del mes -->
+            <section class="seccion">
+                <h2>Producto del mes</h2>
+                <article class="articulo">
+                    <span class="etiqueta">Disponible</span>
+                    <h3 class="articulo__titulo">Café especial Tostado Medio</h3>
+                    <p class="articulo__texto">Notas de panela, chocolate y cítricos. Ideal para métodos de filtrado.</p>
+                    <p class="articulo__precio">$ 38.000 / 500g</p>
+                </article>
+            </section>
+
+            <!-- Sección 3 / Aside: Horario o Información adicional -->
+            <aside class="lateral">
+                <h3 class="lateral__titulo">Horario de Atención</h3>
+                <p>Lunes a sábado: 7:00 a.m. - 7:00 p.m.</p>
+                <h3 class="lateral__titulo">Ubicación</h3>
+                <p>Cauca, Colombia</p>
+            </aside>
+        </div>
+    </main>
+
+    <footer class="pie">
+        <div class="contenedor">
+            <p>2026 - Hecho por Aprendiz SENA</p>
+        </div>
+    </footer>
+</body>
+</html>

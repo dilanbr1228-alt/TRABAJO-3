@@ -1,94 +1,48 @@
-/* Configuración raíz y unidades */
-html {
-    font-size: 16px; /* 1rem = 16px */
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: sans-serif;
-    color: #333;
-}
-
-/* Contenedor general con medida fija (px) para max-width */
-.contenedor {
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 0 1rem;
-}
-
-/* Encabezado */
-.encabezado {
-    background-color: #6f4e37;
-    color: #fff;
-    padding: 1rem 0;
-}
-
-.encabezado .contenedor {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo {
-    font-size: 1.5rem; /* Usando rem */
-}
-
-.menu {
-    list-style: none;
-    display: flex;
+/* Estructura en Grid para la sección principal y el aside */
+.contenido-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
     gap: 1.5rem;
-}
-
-.menu__enlace {
-    color: #fff;
-    text-decoration: none;
-    padding: 0.5em 1em; /* Usando em relativo al propio font-size */
-}
-
-/* Main y Secciones */
-.principal {
-    max-width: 960px;
-    margin: 2rem auto; /* Usando rem */
-    padding: 0 1rem;
-}
-
-.seccion {
-    background: #f9f9f9;
-    border: 1px solid #ddd; /* Usando px para bordes finos */
-    border-radius: 8px; /* px para bordes redondeados */
-    padding: 2rem; /* rem para espaciados internos */
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* px para sombras */
-}
-
-.seccion h2 {
-    font-size: 2rem;
-    margin-bottom: 1em; /* em para márgenes de títulos */
-    color: #6f4e37;
-}
-
-/* Footer */
-.pie {
-    text-align: center;
-    padding: 1.5rem;
-    background-color: #333;
-    color: #fff;
     margin-top: 2rem;
 }
 
-/* Media Query con punto de quiebre en px */
-@media (max-width: 600px) {
-    .encabezado .contenedor {
-        flex-direction: column;
-        gap: 1rem;
-        text-align: center;
-    }
-    .menu {
-        flex-direction: column;
-        gap: 0.5rem;
+.articulo__titulo {
+    margin-block: 0.5rem;
+}
+
+.articulo__precio {
+    margin-top: 1rem;
+    font-size: 1.25rem; /* em/rem según escala */
+    font-weight: 700;
+    color: #6f4e37;
+}
+
+.etiqueta {
+    display: inline-block;
+    padding: 0.2rem 0.75rem;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    background-color: #2e7d32;
+    color: #fff;
+    font-weight: 600;
+}
+
+.lateral {
+    background-color: #f1f1f1;
+    border-left: 4px solid #2e7d32;
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+
+.lateral__titulo {
+    color: #2e7d32;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Ajuste responsive para pantallas pequeñas */
+@media (max-width: 700px) {
+    .contenido-grid {
+        grid-template-columns: 1fr;
     }
 }
